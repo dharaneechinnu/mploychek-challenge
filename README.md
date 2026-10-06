@@ -74,3 +74,8 @@ user / user123
 
 **Main concept:**  
 **Login → JWT → Role Check → API → MongoDB → Role-based Records**
+
+**Screenshots:**
+<img width="1842" height="1017" alt="image" src="https://github.com/user-attachments/assets/5b1a01a5-893a-4c2e-81aa-aa9c494000bd" />
+<img width="1848" height="1011" a<img width="1836" height="1008" alt="image" src="https://github.com/user-attachments/assets/2b4cca93-5c8e-463b-aec8-5a9b862ef43f" />
+<img width="1836" height="1008" alt="image" src="https://github.com/user-attachments/assets/8d0eb7ec-e88c-4722-86f0-91268df3577f" />
