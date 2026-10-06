@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -19,7 +20,7 @@ import { ConfirmDialogComponent } from './confirm-dialog.component';
   selector: 'app-admin-users',
   imports: [
     ReactiveFormsModule, RouterLink,
-    MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule,
+    MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule,
     MatSelectModule, MatTableModule, MatToolbarModule,
   ],
   templateUrl: './admin-users.component.html',
@@ -32,6 +33,7 @@ export class AdminUsersComponent implements OnInit {
   private fb = inject(FormBuilder).nonNullable;
 
   users = signal<User[]>([]);
+  showPassword = signal(false);
   editingId = signal<string | null>(null);
   columns = ['userId', 'name', 'role', 'actions'];
 

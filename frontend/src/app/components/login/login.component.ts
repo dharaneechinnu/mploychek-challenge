@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatInputModule, MatSelectModule],
+  imports: [ReactiveFormsModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSelectModule],
   templateUrl: './login.component.html',
 })
 export class LoginComponent {
@@ -23,6 +24,7 @@ export class LoginComponent {
     password: ['', Validators.required],
     role: ['user' as 'admin' | 'user', Validators.required],
   });
+  showPassword = signal(false);
   loading = signal(false);
   error = signal('');
 
