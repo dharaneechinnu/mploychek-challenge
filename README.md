@@ -1,5 +1,47 @@
 # MPloyChek – Role-Based Records Portal
 
+## Setup
+
+Requires Node 20+ and a MongoDB database (local or Atlas).
+
+### Backend (http://localhost:3000)
+
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+```
+
+`backend/.env`:
+
+```env
+PORT=3000
+MONGODB_URI=mongodb://127.0.0.1:27017/mploychek
+JWT_SECRET=change-me
+CORS_ORIGIN=http://localhost:4200
+```
+
+For Atlas, set `MONGODB_URI` to your connection string, e.g. `mongodb+srv://<user>:<password>@<cluster>.mongodb.net/mploychek`.
+
+### Frontend (http://localhost:4200)
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+API URL is set in `frontend/src/environments/environment.development.ts`:
+
+```ts
+export const environment = {
+  apiUrl: 'http://localhost:3000/api',
+};
+```
+
+---
+
 A simple web application where users log in and see records based on their role.
 
 **Tech Stack:** Angular 19, Angular Material, TypeScript, Node.js, Express, MongoDB, Mongoose.
