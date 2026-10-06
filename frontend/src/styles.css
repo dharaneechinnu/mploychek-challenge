@@ -1,0 +1,20 @@
+html, body { height: 100%; margin: 0; }
+body { font-family: Roboto, "Helvetica Neue", sans-serif; background: #f5f5f5; }
+.page { max-width: 960px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; }
+.spacer { flex: 1; }
+.error { color: #b3261e; }
+.empty { padding: 16px; color: #666; }
+
+/* login */
+.wrap { min-height: 100vh; display: grid; place-items: center; padding: 16px; }
+.wrap mat-card { width: 100%; max-width: 380px; padding: 8px; }
+.wrap form { display: flex; flex-direction: column; margin-top: 16px; }
+.hint { text-align: center; color: #666; font-size: 13px; margin-bottom: 0; }
+
+/* records + admin */
+.controls { display: flex; align-items: center; gap: 16px; margin-top: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); column-gap: 16px; margin-top: 16px; }
+.actions { display: flex; align-items: center; gap: 8px; grid-column: 1 / -1; }
+.row-actions { text-align: right; white-space: nowrap; }
